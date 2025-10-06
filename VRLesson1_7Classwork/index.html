@@ -7,6 +7,13 @@
       <a-assets>
         <img id="texture" src="pacman_maze.jpg" />
       </a-assets>
+      <a-entity position="0 0 0">
+        <!--Body-->
+        <a-sphere position="0 1.5 0" radius="1" color="yellow" scale="1 1.25 1" side="double" ></a-sphere>
+        <!--Eyes-->
+        <a-sphere position="-0.3 1.8 0.9" radius="0.2" color="white"></a-sphere>
+        <a-sphere position="0.3 1.8 0.9" radius="0.2" color="white"></a-sphere>
+      </a-entity>
       <a-plane position="0 0 -4" rotation="-90 0 0" width="20" height="20" repeat="5 5" src="#texture"></a-plane>
       <a-sky color="black"></a-sky>
     </a-scene>
