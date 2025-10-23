@@ -10,11 +10,13 @@ class house{
     base.setAttribute("position","0 0.5 0");
     this.obj.append( base );
 
-    let roof = document.createElement("a-cone");
+    let roof = document.createElement("a-cylinder");
     roof.setAttribute("color","red");
+    roof.setAttribute("position","0 1.25 0");
+    roof.setAttribute("radius","0.75");
     roof.setAttribute("height","1");
-    roof.setAttribute("radius-bottom","1.5");
-    roof.setAttribute("position","0 1.5 0");
+    roof.setAttribute("rotation","270 0 0");
+    roof.setAttribute("segments-radial","3");
     this.obj.append( roof );
 
     this.obj.setAttribute("position",{x:x, y:0.5, z:z});
