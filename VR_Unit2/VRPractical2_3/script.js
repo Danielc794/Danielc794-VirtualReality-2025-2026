@@ -15,5 +15,4 @@ window.addEventListener("DOMContentLoaded",function() {
     let z = rnd(-20,20);
     let house = new house(x, z);
   }
-
 })
