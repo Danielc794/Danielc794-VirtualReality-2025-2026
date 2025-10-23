@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded",function() {
 
     dude = document.querySelector("#dude");
 	dude.size = 0;
-	dude.grow = 0.0025;
+	dude.grow = 0.2;
 	dudeloop();
 
     sun = document.querySelector("#sun");
