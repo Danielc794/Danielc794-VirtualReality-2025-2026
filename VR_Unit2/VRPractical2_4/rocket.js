@@ -23,7 +23,15 @@ class Rocket{
     nose.setAttribute("color", "red");
     this.obj.append(nose);
 
-    this.obj.setAttribute("position",{x:x, y:y, z:z});
+    let flame = document.createElement("a-cone");
+    flame.setAttribute("position", `0 -1.5 -2`);
+    flame.setAttribute("radius-bottom", "0.5");
+    flame.setAttribute("radius-top", "0");
+    flame.setAttribute("height", "0.5");
+    flame.setAttribute("color", "orange");
+    this.obj.append(flame);
+
+    this.obj.setAttribute("position",{x:this.x, y:this.y, z:this.z});
     scene.append( this.obj )
   }
 
