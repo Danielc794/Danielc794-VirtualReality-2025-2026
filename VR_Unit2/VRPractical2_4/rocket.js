@@ -13,7 +13,17 @@ class Rocket{
     body.setAttribute("radius", "0.1");
     body.setAttribute("height", "1");
     body.setAttribute("color", "#FF0000");
-    this.obj.appendChild(body);
+    this.obj.append(body);
+    
+    let nose = document.createElement("a-cone");
+    nose.setAttribute("position", `${x} ${y + 0.5} ${z}`);
+    nose.setAttribute("radius-bottom", "0.1");
+    nose.setAttribute("height", "0.3");
+    nose.setAttribute("color", "#FFFF00");
+    this.obj.append(nose);
+
+    this.obj.setAttribute("position",{x:x, y:y, z:z});
+    scene.append( this.obj )
   }
 
     launch(){
