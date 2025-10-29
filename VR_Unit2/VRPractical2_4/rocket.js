@@ -4,22 +4,23 @@ class Rocket{
     this.y = y;
     this.z = z;
     this.a = 0;
-    this.da = 0.001;
+    this.da = 0.01;
 
     this.obj = document.createElement("a-entity");
     
     let body = document.createElement("a-cylinder");
-    body.setAttribute("position", `${x} ${y} ${z}`);
-    body.setAttribute("radius", "0.1");
-    body.setAttribute("height", "1");
-    body.setAttribute("color", "#FF0000");
+    body.setAttribute("position", `0 -1.5 -2`);
+    body.setAttribute("radius", "0.5");
+    body.setAttribute("height", "2");
+    body.setAttribute("color", "gray");
     this.obj.append(body);
     
     let nose = document.createElement("a-cone");
-    nose.setAttribute("position", `${x} ${y + 0.5} ${z}`);
-    nose.setAttribute("radius-bottom", "0.1");
-    nose.setAttribute("height", "0.3");
-    nose.setAttribute("color", "#FFFF00");
+    nose.setAttribute("position", `0 0 -2`);
+    nose.setAttribute("radius-bottom", "0.5");
+    nose.setAttribute("radius-top", "0");
+    nose.setAttribute("height", "1");
+    nose.setAttribute("color", "red");
     this.obj.append(nose);
 
     this.obj.setAttribute("position",{x:x, y:y, z:z});
