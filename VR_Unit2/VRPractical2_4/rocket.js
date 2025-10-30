@@ -3,8 +3,8 @@ class Rocket{
     this.x = x;
     this.y = y;
     this.z = z;
-    this.a = 0;
-    this.da = 0.01;
+    this.a = y;
+    this.da = 0.1;
 
     this.obj = document.createElement("a-entity");
     
@@ -12,7 +12,7 @@ class Rocket{
     body.setAttribute("position", `0 -1.5 -2`);
     body.setAttribute("radius", "0.5");
     body.setAttribute("height", "2");
-    body.setAttribute("color", "gray");
+    body.setAttribute("color", "whitesmoke");
     this.obj.append(body);
     
     let nose = document.createElement("a-cone");
@@ -24,11 +24,13 @@ class Rocket{
     this.obj.append(nose);
 
     let flame = document.createElement("a-cone");
-    flame.setAttribute("position", `0 -1.5 -2`);
+    flame.setAttribute("position", `0 -3.5 -2`);
+    flame.setAttribute("rotation", "180 0 0");
     flame.setAttribute("radius-bottom", "0.5");
-    flame.setAttribute("radius-top", "0");
-    flame.setAttribute("height", "0.5");
+    flame.setAttribute("radius-top", "0.25");
+    flame.setAttribute("height", "2");
     flame.setAttribute("color", "orange");
+    flame.setAttribute("opacity", "0.2");
     this.obj.append(flame);
 
     this.obj.setAttribute("position",{x:this.x, y:this.y, z:this.z});
@@ -37,7 +39,7 @@ class Rocket{
 
     launch(){
     this.a += this.da;
-    this.obj.setAttribute("position", {x:0, y:this.a, z:0});
+    this.obj.setAttribute("position", {x:this.x, y:this.a, z:this.z});
     }
 
 }
