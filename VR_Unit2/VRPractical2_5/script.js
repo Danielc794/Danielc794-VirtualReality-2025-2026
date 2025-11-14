@@ -11,17 +11,17 @@
 */
 
 let maze = [
+  "----x--x--x--------r--",
+  "----x--x--x-----------",
+  "----xxxx--x------r----",
+  "----x--x--x-----------",
+  "----x--x--x-----------",
+  "--------------r-------",
+  "-----------t----------",
+  "-----t---------------",
   "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
+  "-------------o--------",
+  "--------o-------------",
   "----------------------",
 ];
 
@@ -37,10 +37,23 @@ window.addEventListener("DOMContentLoaded",function() {
     /* Challenge 3
       Choose a technique to traverse the each character in the string.
     */ 
+    let row = maze[r];
+    let cols = row.split("");
     /* Challenge 4
        Make an appropriate decision based on the characters you chose to enter 
        in the maze.  Create an instance of the corresponding object.
     */
+    for(let c = 0; c < cols.length; c++){
+      if(cols[c] == "x"){
+        new Block(c,1,r)
+      }
+      else if(cols[c] == "t"){
+        new Tree(c,1,r);
+      }else if(cols[c]=="o"){
+        new Rock(c,1,r)
+      }else if(cols[c]=="r"){
+        new Rocket(c,1,r)
+      }
+    }
   }
-
 })
