@@ -3,12 +3,18 @@
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
     <script src="bullet.js"></script>
     <script src="script.js"></script>
+    <script src="snowman.js"></script>
+    <script src="ammo.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="40" height="40" color="#7BC8A4"></a-plane>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>
       <a-sky color="#ECECEC"></a-sky>
-      <a-camera position="0 1.6 0"></a-camera>
+      <a-camera position="0 1.6 0">
+        <a-cursor></a-cursor>
+        <a-text id="hud" position="-1.75 0.76 -1" value="Ammo: 5 | Killed: 0 | Time: 60" scale="0.2 0.2 0.2" color="black"></a-text>
+        <a-text position="-1.75 0.7 -1" value="Walk up to ammo box and click on box!" scale="0.2 0.2 0.2" color="black"></a-text>
+      </a-camera>
     </a-scene>
   </body>
 </html>
