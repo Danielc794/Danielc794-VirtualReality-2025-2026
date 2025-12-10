@@ -75,7 +75,7 @@ function loop(){
       if(d < 5){
         scene.removeChild(box.obj);
         ammo_boxes.splice(i,1);
-        ammo_count += 5;
+        ammo_count += 3;
       }
     })
   }
