@@ -1,4 +1,34 @@
-from func import jump, curve1, curve2, circles, circles2, stars1, comet, turtle, t, home
+import os
+
+# If no X display is present, try to start a virtual one so turtle/Tk
+# can create a canvas in headless environments.
+_started_display = False
+_display = None
+if os.environ.get("DISPLAY", "") == "" or os.environ.get("HEADLESS", "") == "1":
+  try:
+    from pyvirtualdisplay import Display
+    _display = Display(visible=0, size=(1024, 768))
+    _display.start()
+    _started_display = True
+  except Exception:
+    # fallback: continue and let turtle raise if display is required
+    _started_display = False
+
+import func
+# initialize turtle objects now that a display is (likely) available
+func.init_turtle()
+
+# expose helpers locally (keeps rest of file unchanged)
+jump = func.jump
+curve1 = func.curve1
+curve2 = func.curve2
+circles = func.circles
+circles2 = func.circles2
+stars1 = func.stars1
+comet = func.comet
+home = func.home
+turtle = func.turtle
+t = func.t
 
 #t.speed(0)
 turtle.tracer(0)
@@ -195,3 +225,10 @@ t.end_fill()
 screen = turtle.Screen()
 ts = t.getscreen()
 ts.getcanvas().postscript(file="drawing.eps")
+
+# If we started a virtual display, stop it now.
+if _started_display and _display is not None:
+  try:
+    _display.stop()
+  except Exception:
+    pass
