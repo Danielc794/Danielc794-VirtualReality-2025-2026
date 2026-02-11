@@ -1,0 +1,11 @@
+Model Information:
+* title:	Chica
+* source:	https://sketchfab.com/3d-models/chica-12d0942238d441ae93190389f4daba12
+* author:	Superkerbin (https://sketchfab.com/superkerbin)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Chica" (https://sketchfab.com/3d-models/chica-12d0942238d441ae93190389f4daba12) by Superkerbin (https://sketchfab.com/superkerbin) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

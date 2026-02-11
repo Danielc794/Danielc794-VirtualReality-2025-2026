@@ -15,6 +15,7 @@ window.addEventListener("DOMContentLoaded",function() {
      Set the mainCamera as active while turning off all the
      cameras in the balls when the user presses the space bar.
   */
+  
 
   loop();
 })

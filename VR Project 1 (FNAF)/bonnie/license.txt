@@ -1,0 +1,11 @@
+Model Information:
+* title:	Bonnie
+* source:	https://sketchfab.com/3d-models/bonnie-e9c303eba7ab4e3b86cb0af2cbd088c1
+* author:	Superkerbin (https://sketchfab.com/superkerbin)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Bonnie" (https://sketchfab.com/3d-models/bonnie-e9c303eba7ab4e3b86cb0af2cbd088c1) by Superkerbin (https://sketchfab.com/superkerbin) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

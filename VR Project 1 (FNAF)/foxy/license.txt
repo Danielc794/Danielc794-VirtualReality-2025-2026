@@ -1,0 +1,11 @@
+Model Information:
+* title:	Foxy
+* source:	https://sketchfab.com/3d-models/foxy-b015ce694e1e493c85d762301469cd01
+* author:	999angry (https://sketchfab.com/999angry)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Foxy" (https://sketchfab.com/3d-models/foxy-b015ce694e1e493c85d762301469cd01) by 999angry (https://sketchfab.com/999angry) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

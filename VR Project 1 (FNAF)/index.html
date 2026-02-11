@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazbears Pizza - New Dawn</title>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <style>
+      body { margin: 0; }
+    </style>
+  </head>
+  <body>
+    <script src="mapConfig.js"></script>
+    <script src="bonnie.js"></script>
+    <script src="camera.js"></script>
+    <script src="chica.js"></script>
+    <script src="computer.js"></script>
+    <script src="foxy.js"></script>
+    <script src="freddy.js"></script>
+    <script src="script.js"></script>
+    
+    <a-scene physics="gravity: -9.8">
+      <a-assets>
+        <!-- Main Map Model -->
+        <a-asset_item id="mapModel" src="fazbears_pizza__new_dawn/scene.gltf"></a-asset_item>
+      </a-assets>
+
+      <!-- Lighting -->
+      <a-light type="ambient" intensity="0.4" color="#ffffff"></a-light>
+      <a-light type="directional" intensity="0.6" position="5 10 7" color="#ffffff"></a-light>
+
+      
+      
+      <!-- Environment -->
+      <a-sky color="Black"></a-sky>
+      
+      <!-- Main Map Model - Fazbears Pizza New Dawn -->
+      <a-entity id="pizzaMap">
+        <a-gltf-model 
+          id="map" 
+          src="#mapModel" 
+          position="0 0 0" 
+          scale="1 1 1"
+          animation__rotation="property: rotation; to: 0 360 0; loop: false; dur: 0">
+        </a-gltf-model>
+      </a-entity>
+
+      <!-- Camera with collision detection -->
+      <a-camera 
+        id="mainCamera"
+        position="0 1.6 2.5" 
+        zoom="2.6"
+        camera="active: true"
+        movement-controls="enabled: false"
+        wasd-controls="enabled: false"
+        look-controls="enabled: true; pointerLockEnabled: true"
+        rotation-constraint__pitch="min: 0; max: 0"
+        rotation-constraint__yaw="min: -360; max: 360">
+        <!-- <a-entity 
+          id="reticle"
+          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+          material="color: white; shader: flat"
+          position="0 0 -1"
+          scale="0.5 0.5 0.5">
+        </a-entity> -->
+        <a-text 
+          id="output" 
+          position="-1 0.75 -1"
+          value="Welcome to Fazbears Pizza - New Dawn"
+          scale="0.5 0.5 0.5"
+          color="white">
+        </a-text>
+      </a-camera>
+
+      <!-- Interactive UI/Text Elements -->
+      <a-plane 
+        id="infoPanel"
+        position="0 2 -3"
+        rotation="0 0 0"
+        width="1"
+        height="0.75"
+        material="color: #333333; opacity: 0.8"
+        text="value: FNAF1 Recreation\n\nQ - Lights\nE - Doors\nSpacebar - Cameras\nL - Change Lighting; anchor: center; align: center; color: #ffffff; fontSize: 32">
+      </a-plane>
+
+      <!-- Ground plane for reference -->
+      <a-plane 
+        id="groundReference"
+        position="0 -5 0"
+        rotation="-90 0 0"
+        width="50"
+        height="50"
+        material="color: #222222; opacity: 0.3"
+        visible="true">
+      </a-plane>
+
+      <!-- Light on the Left -->
+      <a-box
+        id="leftLight"
+        position="-1.95 1 0"
+        rotation="0 90 0"
+        width="1.2"
+        height="2.5"
+        depth="0.1"
+        material="color: #000000">
+      </a-box>
+
+      <!-- Light on the Right -->
+      <a-box
+        id="rightLight"
+        position="1.95 1 0"
+        rotation="0 90 0"
+        width="1.2"
+        height="2.5"
+        depth="0.1"
+        material="color: #000000">
+      </a-box>
+
+    </a-scene>
+  </body>
+</html>
