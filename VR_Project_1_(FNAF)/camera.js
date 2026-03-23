@@ -12,11 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const YAW_MIN = -25;   // Maximum left turn
     const YAW_MAX = 25;    // Maximum right turn
     
-    // Disable default look controls
-    camera.setAttribute('look-controls', 'enabled: false');
+    // Keep native look controls. camera system overrides while active.
+    camera.setAttribute('look-controls', 'enabled: true; pointerLockEnabled: true');
     
     // Mouse down - start tracking
     document.addEventListener('mousedown', function(event) {
+        if (window.CameraSystemActive) return;
         isDragging = true;
         previousMousePosition = { x: event.clientX, y: event.clientY };
     });
@@ -28,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Mouse move - update Y rotation only
     document.addEventListener('mousemove', function(event) {
-        if (!isDragging) return;
+        if (!isDragging || window.CameraSystemActive) return;
         
         const deltaMove = {
             x: event.clientX - previousMousePosition.x,
